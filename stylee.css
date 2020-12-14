@@ -1,0 +1,139 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: hsl(0, 0%, 100%);
+    width:100%;
+    height:100vh;
+    font-family:"Red Hat Text", sans-serif;
+    font-size:14px;
+}
+h3{
+    font-size:20px;
+    width:100%;
+    color:hsl(0, 0%, 100%);
+    padding-top: 35px;
+}
+h2{
+    color:hsl(237, 18%, 59%);
+}
+h1{
+    color:hsl(345, 95%, 68%);
+    font-size:90px;
+    opacity:0.6;
+    z-index:10;
+    text-align: center;
+    position: relative;
+}
+h1,h2,h3{
+    text-align: center;
+}
+section h1, h2{
+    position: relative;
+    top:-7.3rem;
+    left:-0.7rem;
+}
+section h2{
+    top:-6.2rem;
+}
+
+#container{
+    display:flex;
+    width:100%;
+    position: relative;
+    margin:50px auto 35px auto;
+    justify-content: center;
+}
+main{
+    width:1140px;
+    margin:5vh auto;
+    height:80vh;
+    left:8%;
+    transform: translateY(5vh);
+    background:hsl(235, 16%, 14%);
+    position: fixed;
+}
+section{
+    width:15%;
+    height:100%;
+}
+ .primary{
+    background:  hsl(236, 21%, 26%);
+    z-index:5;
+    height:70px;
+    width:9rem;
+    border-radius: 10px;
+}
+.attribution{
+    background-image:url('../images/pattern-hills.svg');
+    text-align: center;
+    position: relative;
+    top:66.4vh;
+    left:-0.2%;
+    height: 150px;
+    padding: 30px 0;
+    background-size: 100%;
+    width:83.2%;
+    color:hsl(237, 18%, 59%);
+    margin: 0 auto;
+}
+#pattern{
+    display: none;
+}
+.attribution a{
+    text-decoration:none;
+}
+a img{
+    margin:10px;
+}
+@media(max-width:550px){
+    body{
+        background: hsl(235, 16%, 14%);
+        width:100%;
+    }
+    main{
+        width:375px;
+        height:100%;
+        left:0;
+    }
+    h3{
+        font-size:18px;
+        padding-top: 20px;
+    }
+    h1{
+        font-size:60px;
+    }
+    section h1, h2{
+        top:-4.5rem;
+        left:-3.5px;
+    }
+    section h2{
+        top:-3rem;
+        font-size: 14px;
+        text-align: center;
+    }
+    .primary{
+        height:40px;
+        width: 4.5rem;
+        border-radius: 10px;
+    }
+    section{
+        width:22%;
+        height:100%;
+    }
+    .attribution{
+        top:69vh;
+        z-index:10 ;
+        background:none;      
+    }
+    #pattern{
+        top:11.3vh;
+        left:-2rem;
+        width:375px;
+        display: inline-block;
+        position: absolute;;
+        height:100px;
+    }
+}
