@@ -1,9 +1,11 @@
 function countDown(){
+    
     const now = new Date();
-    var eventDate = new Date(2020, 12, 3);
+    var eventDate = new Date(2021,10,5);
 
     var currentTime = now.getTime();
     var eventTime = eventDate.getTime();
+
     var remTime = eventTime - currentTime;
 
 
@@ -15,16 +17,16 @@ function countDown(){
     h %= 24;
     m %=60;
     s %=60;  
-    if(d < 10){
+    if(d < 10 && d>0){
         d = '0' + d;
     };
-    if(h < 10){
+    if(h < 10 && h>0){
         h = '0' + h;
     };
-    if(m < 10){
+    if(m < 10 && m>0){
         m = '0'+m;
     };
-    if(s < 10){
+    if(s < 10 && s>0){
         s = '0'+s;
     };
 
@@ -32,6 +34,16 @@ function countDown(){
     document.querySelector('#hours').innerHTML = h;
     document.querySelector("#minutes").innerHTML = m;
     document.querySelector("#seconds").innerHTML = s;
-    
+
+    checkFinished(d);
 };
-setInterval(countDown, 1000);
+
+function checkFinished(d){
+    if(d<0){
+        //do nothing
+    }else{
+        setInterval(countDown, 1000);
+    }
+}
+
+countDown();
